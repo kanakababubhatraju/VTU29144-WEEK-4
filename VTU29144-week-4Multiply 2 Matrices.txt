@@ -1,0 +1,47 @@
+Multiply 2 Matrices
+https://www.geeksforgeeks.org/problems/multiply-2-matrices4144/1
+Program:-
+import java.util.*;
+
+class Solution {
+
+    public ArrayList<ArrayList<Integer>> multiply(int[][] mat1, int[][] mat2) {
+
+        int n = mat1.length;
+
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            ArrayList<Integer> row = new ArrayList<>();
+
+            for (int j = 0; j < n; j++) {
+                int sum = 0;
+
+                for (int k = 0; k < n; k++) {
+                    sum += mat1[i][k] * mat2[k][j];
+                }
+
+                row.add(sum);
+            }
+
+            result.add(row);
+        }
+
+        return result;
+    }
+}
+Output:-
+Problem Solved Successfully
+Suggest Feedback
+Test Cases Passed
+1115 / 1115
+Attempts : Correct / Total
+1 / 1
+Accuracy :
+100%
+Points Scored 
+4 / 4
+Your Total Score:
+4 
+Time Taken
+0.43
