@@ -1,0 +1,58 @@
+Lapindromes
+https://www.codechef.com/problems/LAPIN
+Program:-
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+
+        while (T-- > 0) {
+            String s = sc.next();
+
+            int n = s.length();
+            int[] left = new int[26];
+            int[] right = new int[26];
+
+            // Left half
+            for (int i = 0; i < n / 2; i++) {
+                left[s.charAt(i) - 'a']++;
+            }
+
+            // Right half
+            // If n is odd, this automatically skips the middle character
+            for (int i = (n + 1) / 2; i < n; i++) {
+                right[s.charAt(i) - 'a']++;
+            }
+
+            if (Arrays.equals(left, right)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+
+        sc.close();
+    }
+}
+Output:-Sub-Task	Task #	Result
+(time)
+1	0	Correct
+(0.08)
+Subtask Score: 20%	Result - Correct
+2	1	Correct
+(0.10)
+Subtask Score: 20%	Result - Correct
+3	2	Correct
+(0.12)
+Subtask Score: 20%	Result - Correct
+4	3	Correct
+(0.12)
+Subtask Score: 20%	Result - Correct
+5	4	Correct
+(0.13)
+Subtask Score: 20%	Result - Correct
+Total Score = 100%
